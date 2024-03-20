@@ -12,7 +12,7 @@ const Orders = () => {
   const orderDetails = async () => {
     try {
       const details = await fetch(
-        `http://localhost:8000/api/v1/Order/order-details/${auth?.user?.id}`,
+        `https://e-commerce-2024-2.onrender.com/api/v1/Order/order-details/${auth?.user?.id}`,
         {
           method: "GET",
           headers: {

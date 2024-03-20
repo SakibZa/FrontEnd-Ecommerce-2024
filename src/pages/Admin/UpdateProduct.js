@@ -30,7 +30,7 @@ const UpdateProduct = () => {
 
     const getSingleProduct = async () =>{
         try{
-            const { data } = await axios.get( `http://localhost:8000/api/v1/products/get-product/${params.slug}` )
+            const { data } = await axios.get( `https://e-commerce-2024-2.onrender.com/api/v1/products/get-product/${params.slug}` )
             setId(data.product._id)
             setName(data.product.name);
             setDescription(data.product.description);
@@ -58,7 +58,7 @@ useEffect(()=>{
   const getAllCategory = async () => {
     try {
       const response = await fetch(
-        "http://localhost:8000/api/v1/category/get-categories",
+        "https://e-commerce-2024-2.onrender.com/api/v1/category/get-categories",
         {
           method: "GET",
           headers: {
@@ -88,7 +88,7 @@ useEffect(()=>{
       formData.append("price", price);
       formData.append("shipping", shipping);
        
-      const response = await fetch(`http://localhost:8000/api/v1/products/update-product/${id}`, {
+      const response = await fetch(`https://e-commerce-2024-2.onrender.com/api/v1/products/update-product/${id}`, {
         method: "PUT",
         headers:{
           "x-access-token": token
@@ -112,7 +112,7 @@ useEffect(()=>{
     try{
             let answer = window.prompt('Are you sure you want to delete');
             if(!answer) return ;
-            const result = await axios.delete(`http://localhost:8000/api/v1/products/product-delete/${id}`,{
+            const result = await axios.delete(`https://e-commerce-2024-2.onrender.com/api/v1/products/product-delete/${id}`,{
             headers:{
                 "x-access-token": token
             }
@@ -132,7 +132,7 @@ useEffect(()=>{
     setLoading(true)
     let dataUrl = "";
       try {
-        const response = await axios.get(`http://localhost:8000/api/v1/products/product-photo/${id}`, {
+        const response = await axios.get(`https://e-commerce-2024-2.onrender.com/api/v1/products/product-photo/${id}`, {
           responseType: 'arraybuffer', // Specify response type as arraybuffer for binary data
         });
         const imageData = arrayBufferToBase64(response.data); // Convert array buffer to base64

@@ -38,7 +38,7 @@ const Profile = () => {
  const updateUserData = async (e) => {
   e.preventDefault();
 
-  const response = await fetch(`http://localhost:8000/api/v1/auth/update-user/${id}`, {
+  const response = await fetch(`https://e-commerce-2024-2.onrender.com/api/v1/auth/update-user/${id}`, {
     method: "PUT",
     headers: {
       "Content-Type": "application/json",

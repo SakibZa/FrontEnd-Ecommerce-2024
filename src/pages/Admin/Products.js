@@ -13,7 +13,7 @@ const Products = () => {
   const getAllProduct = async () => {
     try {
       const response = await fetch(
-        "http://localhost:8000/api/v1/products/get-product",
+        "https://e-commerce-2024-2.onrender.com/api/v1/products/get-product",
         {
           method: "GET",
           headers: {
@@ -43,7 +43,7 @@ const Products = () => {
     const state = {};
     for (const product of products) {
       try {
-        const response = await axios.get(`http://localhost:8000/api/v1/products/product-photo/${product._id}`, {
+        const response = await axios.get(`https://e-commerce-2024-2.onrender.com/api/v1/products/product-photo/${product._id}`, {
           responseType: 'arraybuffer', // Specify response type as arraybuffer for binary data
         });
         const imageData = arrayBufferToBase64(response.data); // Convert array buffer to base64

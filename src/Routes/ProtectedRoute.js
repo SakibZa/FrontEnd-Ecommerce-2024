@@ -11,7 +11,7 @@ const ProtectedRoute = () => {
     const fetchData = async () => {
         try {
             console.log("Fetching data...");
-            const response = await fetch("http://localhost:8000/api/v1/auth/protected", {
+            const response = await fetch("https://e-commerce-2024-2.onrender.com/api/v1/auth/protected", {
                 method: "GET",
                 headers: {
                     "Content-Type": "application/json",

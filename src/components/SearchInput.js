@@ -10,7 +10,7 @@ const SearchInput = () => {
    try {
       e.preventDefault();
       const { keyword } = value;
-      const {data} = await axios.get(`http://localhost:8000/api/v1/products/search/${keyword}`)
+      const {data} = await axios.get(`https://e-commerce-2024-2.onrender.com/api/v1/products/search/${keyword}`)
       setValue({...value, result : data.products})
       const inptKeyword = document.getElementsByName("keyword");
       inptKeyword[0].value = "";

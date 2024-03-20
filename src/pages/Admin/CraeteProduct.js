@@ -25,7 +25,7 @@ const CraeteProduct = () => {
   const getAllCategory = async () => {
     try {
       const response = await fetch(
-        "http://localhost:8000/api/v1/category/get-categories",
+        "https://e-commerce-2024-2.onrender.com/api/v1/category/get-categories",
         {
           method: "GET",
           headers: {
@@ -55,7 +55,7 @@ const CraeteProduct = () => {
       formData.append("price", price);
       formData.append("shipping", shipping);
        
-      const response = await fetch("http://localhost:8000/api/v1/products/create-product", {
+      const response = await fetch("https://e-commerce-2024-2.onrender.com/api/v1/products/create-product", {
         method: "POST",
         headers:{
           "x-access-token": token

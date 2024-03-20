@@ -28,7 +28,7 @@ export default function HomePage() {
 
     const getTotal = async() =>{
       try{
-        const {data} = await axios.get(`http://localhost:8000/api/v1/products/product-count`);
+        const {data} = await axios.get(`https://e-commerce-2024-2.onrender.com/api/v1/products/product-count`);
         setTotal(data.total);
       }catch(error){
         console.log(error);
@@ -40,7 +40,7 @@ export default function HomePage() {
   const getAllProduct = async () => {
     try {
       const { data } = await axios.get(
-        `http://localhost:8000/api/v1/products/get-product-page/${page}`
+        `https://e-commerce-2024-2.onrender.com/api/v1/products/get-product-page/${page}`
       );
       setProducts(data.products);
       getPhotos(data.products);
@@ -63,7 +63,7 @@ export default function HomePage() {
           continue;
         }
         const response = await axios.get(
-          `http://localhost:8000/api/v1/products/product-photo/${product._id}`,
+          `https://e-commerce-2024-2.onrender.com/api/v1/products/product-photo/${product._id}`,
           {
             responseType: "arraybuffer", // Specify response type as arraybuffer for binary data
           }
@@ -92,7 +92,7 @@ export default function HomePage() {
   const getAllCategory = async () => {
     try {
       const response = await fetch(
-        "http://localhost:8000/api/v1/category/get-categories",
+        "https://e-commerce-2024-2.onrender.com/api/v1/category/get-categories",
         {
           method: "GET",
           headers: {
@@ -148,7 +148,7 @@ export default function HomePage() {
   const getFIlterProduct = async () => {
     try {
       const response = await axios.post(
-        "http://localhost:8000/api/v1/products/filter-product",
+        "https://e-commerce-2024-2.onrender.com/api/v1/products/filter-product",
         {
           checked: filterData,
           radio: priceFilterData,
@@ -177,7 +177,7 @@ export default function HomePage() {
     setPriceFilterData([]);
     try {
       const { data } = await axios.get(
-        `http://localhost:8000/api/v1/products/get-product`
+        `https://e-commerce-2024-2.onrender.com/api/v1/products/get-product`
       );
       setProducts(data.products);
       getPhotos(data.products);
@@ -199,7 +199,7 @@ export default function HomePage() {
   const handleLoadmoredata = async ()=>{
     try{
       console.log("page value" , page);
-      const {data} = await axios.get(`http://localhost:8000/api/v1/products/get-product-page/${page}`)
+      const {data} = await axios.get(`https://e-commerce-2024-2.onrender.com/api/v1/products/get-product-page/${page}`)
       const result = data.products;
       setProducts([...products, ...data.products])
       getPhotos([...products , ...result])

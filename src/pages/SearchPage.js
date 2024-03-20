@@ -26,7 +26,7 @@ const SearchPage = () => {
 
       try {
         const response = await axios.get(
-          `http://localhost:8000/api/v1/products/product-photo/${product._id}`,
+          `https://e-commerce-2024-2.onrender.com/api/v1/products/product-photo/${product._id}`,
           {
             responseType: "arraybuffer", // Specify response type as arraybuffer for binary data
           }

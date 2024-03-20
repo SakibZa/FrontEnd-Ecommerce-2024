@@ -11,7 +11,7 @@ const AdminRoute = () => {
     const fetchData = async () => {
         try {
             console.log("Fetching data...");
-            const response = await fetch("http://localhost:8000/api/v1/auth/admin-auth", {
+            const response = await fetch("https://e-commerce-2024-2.onrender.com/api/v1/auth/admin-auth", {
                 method: "GET",
                 headers: {
                     "Content-Type": "application/json",

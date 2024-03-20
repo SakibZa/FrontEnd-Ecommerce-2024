@@ -14,7 +14,7 @@ const ProductDetails = () => {
   const [cart , setCart] = useCart();
   const productDetails = async () => {
     const { data } = await axios.get(
-      `http://localhost:8000/api/v1/products/get-product/${slug}`
+      `https://e-commerce-2024-2.onrender.com/api/v1/products/get-product/${slug}`
     );
     setProduct(data.product);
   };
@@ -32,7 +32,7 @@ const ProductDetails = () => {
     const photos = {};
       try {
         const response = await axios.get(
-          `http://localhost:8000/api/v1/products/product-photo/${id}`,
+          `https://e-commerce-2024-2.onrender.com/api/v1/products/product-photo/${id}`,
           {
             responseType: "arraybuffer", 
           }

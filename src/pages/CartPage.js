@@ -20,7 +20,7 @@ const CartPage = () => {
       setShowLoading(true);
       setTimeout(async () => {
         try {
-          const response = await fetch('http://localhost:8000/api/v1/Order/place-order', {
+          const response = await fetch('https://e-commerce-2024-2.onrender.com/api/v1/Order/place-order', {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json',
@@ -63,7 +63,7 @@ const CartPage = () => {
           continue;
         }
         const response = await axios.get(
-          `http://localhost:8000/api/v1/products/product-photo/${product._id}`,
+          `https://e-commerce-2024-2.onrender.com/api/v1/products/product-photo/${product._id}`,
           {
             responseType: "arraybuffer", // Specify response type as arraybuffer for binary data
           }

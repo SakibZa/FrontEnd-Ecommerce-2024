@@ -23,7 +23,7 @@ const CreateCategory = () => {
     e.preventDefault();
     try {
       const response = await fetch(
-        "http://localhost:8000/api/v1/category/create-category",
+        "https://e-commerce-2024-2.onrender.com/api/v1/category/create-category",
         {
           method: "POST",
           headers: {
@@ -63,7 +63,7 @@ const CreateCategory = () => {
   const getAllCategory = async () => {
     try {
       const response = await fetch(
-        "http://localhost:8000/api/v1/category/get-categories",
+        "https://e-commerce-2024-2.onrender.com/api/v1/category/get-categories",
         {
           method: "GET",
           headers: {
@@ -86,7 +86,7 @@ const CreateCategory = () => {
     e.preventDefault();
     try {
       const response = await fetch(
-        `http://localhost:8000/api/v1/category/update-category/${idOfCategory}`,
+        `https://e-commerce-2024-2.onrender.com/api/v1/category/update-category/${idOfCategory}`,
         {
           method: "PUT",
           headers: {
@@ -118,7 +118,7 @@ const CreateCategory = () => {
 
   const handleDeleteCategory = async (id) => {
    
-    const response = await fetch(`http://localhost:8000/api/v1/category/delete-category/${id}`, {
+    const response = await fetch(`https://e-commerce-2024-2.onrender.com/api/v1/category/delete-category/${id}`, {
        method : "DELETE",
        headers : {
            "Content-Type" : "application/json",

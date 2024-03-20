@@ -18,7 +18,7 @@ export default function Register() {
 
    const handleSubmit = async(e)=>{
     e.preventDefault();
-      const response = await fetch("http://localhost:8000/api/v1/auth/register",{
+      const response = await fetch("https://e-commerce-2024-2.onrender.com/api/v1/auth/register",{
         method:"POST",
         headers: {
           "Content-Type": "application/json",
